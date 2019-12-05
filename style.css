@@ -43,7 +43,7 @@ h1 {
     background-color: var(--card-color);
     margin: 30px auto;
     border-radius: 10px;
-    box-shadow: -5px 5px var(--card-shadow);
+    box-shadow: 10px 10px var(--card-shadow);
     padding: 30px;
 }
 
@@ -51,7 +51,7 @@ h1 {
     background: var(--card-primary);
     padding: 40px;
     margin-bottom: 50px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     position: relative;
 }
 
