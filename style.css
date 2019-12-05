@@ -1,0 +1,231 @@
+/* -------
+    Fonts
+   ------- */
+
+@import url(
+    'https://fonts.googleapis.com/css?family=Caveat+Brush|Pacifico&display=swap'
+    );
+
+/* ------
+   Colors
+   ------ */
+
+:root {
+    --background: #fff8fc;
+    --card-color: #bc9ec1;
+    --card-shadow: #937e97;
+    --card-primary: #cab3ce;
+    --title-color: #e448a5;
+    --btn-title: #d63e92;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+}
+
+h1 {
+    color: var(--title-color);
+    text-align: center;
+    font-family: 'Pacifico';
+    font-weight: 500;
+    padding-top: 20px;
+    font-size: 4em;
+    text-decoration: underline;
+    text-decoration-color: #8ea3b1
+}
+
+.card {
+    width: 70vw;
+    background-color: var(--card-color);
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: -5px 5px var(--card-shadow);
+    padding: 30px;
+}
+
+.btn-container {
+    background: var(--card-primary);
+    padding: 40px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.btn-container:last-child {
+    margin-bottom: 0px;
+}
+
+.btn-title {
+    font-size: 2.2em;
+    color: var(--btn-title);
+    font-weight: 400;
+    font-family: 'Caveat Brush';
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+/* -----------------------
+    Facebook style button 
+   ----------------------- */
+
+.btn-1 {
+    background-color: #3c5fa3; 
+    height: 50px;
+    width: 200px;
+    color: white;
+    text-shadow: 1px 1px 5px rgb(49, 49, 49);
+    font-weight: 600;
+    font-size: 1.3em;
+    border-radius: 2px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px #6a83b6 inset;
+}
+
+
+/* -----------
+    3D button 
+   ----------- */
+
+.btn-2 {
+    background-color: #E75151;
+    color: rgb(255, 233, 233);
+    font-weight: 600;
+    height: 70px;
+    width: 160px;
+    font-size: 1.7em;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+    box-shadow: -10px 10px 0px rgb(177, 62, 62);
+}
+
+ .btn-2:active {
+     left: -4px;
+     bottom: -4px;
+     box-shadow: -6px 6px 0 rgb(177, 62, 62);
+     background-color: rgb(224, 90, 90);
+     outline-style: none;
+ }
+
+ .btn-2:active::before {
+     border: 6px solid transparent;
+     border-right: 6px #b13e3e solid;
+     border-left: 0;
+     left: -6px;
+ }
+
+ .btn-2:active::after {
+     border: 6px solid transparent;
+     border-top: 6px #b13e3e solid;
+     border-bottom: 0px;
+     bottom: -6px;
+ }
+
+  .btn-2::before {
+      content: "";
+      height: 0;
+      width: 0;
+      position: absolute;
+      border: 10px transparent solid;
+      border-right: 10px #b13e3e solid;
+      border-left: 0;
+      top: 0;
+      left: -10px;
+  }
+  
+  .btn-2::after {
+      content: "";
+      height: 0;
+      width: 0;
+      border: 10px transparent solid; 
+      border-top: 10px #b13e3e solid;
+      border-bottom: 0;
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+  }
+
+/* ----------------
+   Circle 3D button
+   ---------------- */
+
+.btn-3 {
+    background-image: radial-gradient(rgb(250, 171, 142), rgb(216, 71, 71));
+    position: absolute;
+    cursor: pointer;
+    border:0;
+    right: 50px;
+    bottom: 40px;
+    height: 100px;
+    width: 100px;
+    font-size: 1.3em;
+    text-shadow: 0px -1px 5px rgb(216, 71, 71);
+    font-weight: 700;
+    color: rgb(255, 240, 240);
+
+    border-radius: 50%;
+    box-shadow: 0 1px 0px rgb(214, 154, 154) inset,
+                0 5px 0px rgb(185, 90, 90),
+                0 10px 1px rgb(144, 144, 144)
+}
+
+ .btn-3:active {
+     background-color: rgb(248, 146, 108);
+     bottom: 35px;
+     box-shadow: 0px 5px 0px rgb(185, 90, 90);
+ }
+
+/* ---------------
+   Gradient button
+   --------------- */
+
+.btn-4 {
+    height: 80px;
+    width: 180px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: rgb(183, 35, 202);
+    border: 10px solid transparent;
+    cursor: pointer;
+    background-color: transparent;
+    border-image: linear-gradient(
+        45deg,
+        rgb(204, 0, 255),
+        rgb(0, 255, 255));
+    border-image-slice: 1;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-4-gradient {
+    height: 60px;
+    width: 160px;
+    position: absolute;
+    z-index: -1;
+    top: 100px;
+    left: 0;
+    background-image: linear-gradient(
+        45deg,
+        rgb(204, 0, 255),
+        rgb(0, 255, 255));
+    border-radius: 50%;
+    transition: all 0.7s ease-in-out;
+}
+
+    .btn-4:hover .btn-4-gradient{
+        top: 0;
+        transform: scale(1);
+        border-radius: 0;
+    }
+
+    .btn-4:hover {
+        color: white;
+    }
