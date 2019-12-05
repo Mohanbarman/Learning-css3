@@ -74,6 +74,7 @@ h1 {
 
 .btn-1 {
     background-color: #3c5fa3; 
+    cursor: pointer;
     height: 50px;
     width: 200px;
     color: white;
@@ -184,6 +185,7 @@ h1 {
    Gradient button
    --------------- */
 
+/* first button */
 .btn-4 {
     height: 80px;
     width: 180px;
@@ -227,4 +229,45 @@ h1 {
 
     .btn-4:hover {
         color: white;
+    }
+
+/* Second button */
+.btn-5 {
+    height: 80px;
+    width: 180px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: rgb(194, 26, 104);
+    border: 10px solid transparent;
+    cursor: pointer;
+    background-color: transparent;
+    border-image: linear-gradient(
+        to right,
+        rgb(255, 0, 149),
+        #cab3ce);
+    border-image-slice: 1;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    right: 40px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-5-gradient {
+    background-image: linear-gradient(
+        to right,
+        rgb(255, 0, 149),
+        #cab3ce);
+    height: 60px;
+    width: 160px;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+    .btn-5:hover { color: rgb(110, 47, 47) }
+    .btn-5:hover .btn-5-gradient {
+        opacity: 1;
     }
