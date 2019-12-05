@@ -15,7 +15,7 @@
     --card-shadow: #937e97;
     --card-primary: #c5a6ca;
     --title-color: #e448a5;
-    --btn-title: #d63e92;
+    --btn-title: #8a6690;
 }
 
 * {
@@ -45,6 +45,29 @@ h1 {
     border-radius: 10px;
     box-shadow: 10px 10px var(--card-shadow);
     padding: 30px;
+    position: relative;
+}
+
+    .card:hover .card-tooltip {
+        left: -130px;
+    }
+
+.card-tooltip {
+    position: absolute;
+    font-size: 1.8rem;
+    background-color: #ff1ea9;
+    padding: 10px 30px 50px 10px;
+    color: rgb(253, 234, 234);
+    font-weight: bold;
+    font-family: 'Pacifico';
+    border-radius: 10px 10px 0px 0px;
+
+    left: -90px;
+    top: 140px;
+    transform: rotate(-0.25turn);
+    z-index: -1;
+
+    transition: all 0.5s ease-in-out
 }
 
 .btn-container {
