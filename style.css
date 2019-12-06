@@ -589,6 +589,7 @@ body {
 /* Input fields */
 .email-input, .pass-input {
     border-radius: 20px;
+    display: block;
     font-size: 1em;
     font-weight: bold;
     padding: 10px 20px;
