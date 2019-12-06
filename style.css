@@ -97,6 +97,13 @@ h1 {
     margin-bottom: 30px;
 }
 
+.btn-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 /* -----------------------
     Facebook style button 
    ----------------------- */
@@ -186,11 +193,8 @@ h1 {
 
 .btn-3 {
     background-image: radial-gradient(rgb(250, 171, 142), rgb(216, 71, 71));
-    position: absolute;
     cursor: pointer;
     border:0;
-    right: 50px;
-    bottom: 40px;
     height: 100px;
     width: 100px;
     font-size: 1.3em;
@@ -276,10 +280,9 @@ h1 {
         #c5a6ca);
     border-image-slice: 1;
     transition: all 0.5s ease-in-out;
-    position: absolute;
-    right: 40px;
     z-index: 1;
     overflow: hidden;
+    position: relative;
 }
 
 .btn-5-gradient {
@@ -353,10 +356,8 @@ h1 {
     border-radius: 5px;
     border: 5px #2f9b89 solid;
 
-    position: absolute;
-    right: 40px;
-
     transition: all 0.5s ease-in-out;
+    position: relative;
 }
 
     .btn-7::after {
@@ -378,4 +379,108 @@ h1 {
     .btn-7:hover::after {
         opacity: 1;
         right: 40px
+    }
+
+/* --------------
+   Toogle buttons
+   -------------- */
+
+/* First button */
+
+.btn-8-input {
+    display: none;
+}
+
+.btn-8 {
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    color: white;
+    line-height: 20px;
+    text-transform: uppercase;
+    background-color: grey;
+    border: solid 3px rgb(76, 87, 87);
+    height: 40px;
+    width: 80px;
+    cursor: pointer;
+    border-radius: 50px;
+
+    transition: all 0.5s ease-in-out;
+}
+
+    .btn-8::after {
+        position: absolute;
+        top: 12%;
+        left: 5px;
+        
+        content: '';
+        padding: 5px;
+        color: white;
+        background-color: rgba(204, 204, 204, 0.671);
+        font-weight: bold;
+        font-size: 0.7em;
+        line-height: 29px;
+        text-align: center;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+
+        transition: all 0.5s ease-in-out;
+    }
+
+    .btn-8-input:checked + .btn-8 {
+        background-color: rgb(38, 186, 206);
+        border-color: rgb(45, 136, 148);
+    }
+    
+    .btn-8-input:checked + .btn-8::after{
+        position: absolute;
+        top: 12%;
+        transform: translateX(40px);
+        background-color: rgba(107, 107, 107, 0.397);
+        
+        content: '';
+        border-radius: 50%;
+    }
+
+/* Second button */
+
+.btn-9-input {
+    display: none;
+}
+
+.btn-9 {
+    color: rgb(189, 189, 189);
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: rgb(104, 104, 104);
+    padding: 20px 40px;
+    border: 2px rgb(158, 158, 158) solid;
+    border-radius: 10px;
+    cursor: pointer;
+
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+    .btn-9::before {
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 180px;
+        left: 35px;
+        top: 50%;
+        background-color: #b3b3b3;
+
+        transition: all 0.5s ease-in-out; 
+    }
+
+    .btn-9-input:checked + .btn-9::before {
+        width: 0;
+    }
+
+    .btn-9-input:checked + .btn-9{
+        background-color: rgb(199, 76, 117);
+        border-color: rgb(119, 32, 72);
+        color: white;
     }
