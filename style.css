@@ -2,7 +2,7 @@
     Fonts
    ------- */
 @import url(
-    'https://fonts.googleapis.com/css?family=Caveat+Brush|Pacifico&display=swap'
+    'https://fonts.googleapis.com/css?family=Berkshire+Swash|Caveat+Brush|Pacifico&display=swap'
     );
 
 /* ------
@@ -25,9 +25,11 @@
 
 body {
     background-color: var(--background);
+    display: flex;
+    flex-direction: column;
 }
 
-h1 {
+.title {
     color: var(--title-color);
     text-align: center;
     font-family: 'Pacifico';
@@ -42,27 +44,50 @@ h1 {
     width: 70vw;
     background-color: var(--card-color);
     margin: 30px auto;
-    border-radius: 10px;
     box-shadow: 10px 10px var(--card-shadow);
     padding: 30px;
     position: relative;
 }
 
+    .card::before{
+        content: '';
+        position: absolute;
+        height: 0;
+        width: 0;
+        border: 10px solid transparent;
+        border-left: 10px solid var(--card-shadow);
+        border-right: 0;
+        top: 0;
+        right: -10px;
+    }
+
+    .card::after {
+        content: '';
+        position: absolute;
+        height: 0;
+        width: 0;
+        border: 10px solid transparent;
+        border-top: 10px solid var(--card-shadow);
+        border-bottom: 0;
+        bottom: -10px;
+        left: 0;
+    }
+
     .card:hover .card-tooltip {
-        left: -90px;
+        left: -130px;
     }
 
 .card-tooltip {
     position: absolute;
     font-size: 1.8rem;
-    background-color: #d83c9c;
+    background-color: #d13a97;
     padding: 10px 40px 50px 40px;
     color: rgb(253, 234, 234);
-    font-weight: bold;
+    font-weight: lighter;
     font-family: 'Pacifico';
     border-radius: 10px 10px 0px 0px;
 
-    left: -40px;
+    left: -90px;
     top: 140px;
     transform: rotate(-0.25turn);
     z-index: -1;
@@ -70,25 +95,25 @@ h1 {
     transition: all 0.5s ease-in-out
 }
 
-.btn-container {
+.sub-card-container {
     background: var(--card-primary);
     padding: 40px;
     margin-bottom: 40px;
     position: relative;
 }
 
-.btn-container:first-child {
+.sub-card-container:first-child {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.btn-container:last-child {
+.sub-card-container:last-child {
     margin-bottom: 0px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-.btn-title {
+.sub-card-title {
     font-size: 2.2em;
     color: var(--btn-title);
     font-weight: 400;
@@ -484,3 +509,35 @@ h1 {
         border-color: rgb(119, 32, 72);
         color: white;
     }
+
+/* ==========================
+   ------ Second card -------
+   ========================== */
+   
+.typo-1 {
+    font-family: 'Berkshire Swash';
+    color: rgb(110, 87, 136);
+    font-size: 5em;
+    text-shadow: 3px 3px 0px #c5a6ca,
+                 9px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.typo-2 {
+    font-family: 'Berkshire Swash';
+    padding: 30px;
+    color: rgb(207, 68, 142);
+    font-size: 6em;
+    transform: skew(5deg, -5deg);
+    text-shadow: 1px 1px 0px #a0326d,
+                 2px 2px 0px #a0326d,
+                 3px 3px 0px #a0326d,
+                 4px 4px 0px #a0326d,
+                 5px 5px 0px #a0326d,
+                 6px 6px 0px #a0326d,
+                 7px 7px 0px #a0326d,
+                 8px 8px 0px #5a2b43,
+                 9px 9px 0px #5a2b43,
+                 9px 9px 0px #5a2b43,
+                 10px 10px 5px black;
+
+}
