@@ -557,9 +557,11 @@ body {
     background-image: linear-gradient(
         0deg,
         rgb(143, 61, 175) 50%,
-        rgb(211, 86, 86) 50%
+        rgb(211, 86, 86) 40%
     );
 
+    background-size: 300%;
+    background-position: top right;
     text-align: center;
     padding: 120px;
     border-radius: 10px;
@@ -567,12 +569,29 @@ body {
 
 /* login card */
 .login-form-block {
-    background-color: rgb(199, 197, 102);
+    background-image: 
+        linear-gradient(
+            135deg,
+          #8f3daf 10%,
+            transparent 10%),
+        linear-gradient(
+            135deg,
+            #c7c566 90%,
+            #d35656 90%);
+    
     display: inline-block;
+    background-size: 200%;
+    background-position: center;
     padding: 40px;
     border-radius: 10px;
     position: relative;
+
+    transition: all 0.5s ease-in-out; 
 }
+
+    .login-form-block:hover {
+        background-size: 100%;
+    }
 
 /* Logo */
 .user-logo-clip {
@@ -601,8 +620,8 @@ body {
 
     .email-input:focus, .pass-input:focus {
         background-color: rgb(209, 188, 150);
-        box-shadow: 0 0 40px rgba(0, 0, 0, 0.37);
-        transform: scale(1.05)
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.219);
+        transform: scale(1.01)
     }
 
 .pass-input {
