@@ -10,12 +10,13 @@
    ------ */
 
 :root {
-    --background: #fff8fc;
+    --background: #4c5066;
     --card-color: #bc9ec1;
-    --card-shadow: #937e97;
+    --card-shadow: #685a6b;
     --card-primary: #c5a6ca;
-    --title-color: #e448a5;
-    --btn-title: #8a6690;
+    --title-color: #e448b0;
+    --btn-title: #604764;
+    --card-tooltip: #8a658a;
 }
 
 * {
@@ -44,7 +45,8 @@ body {
     width: 70vw;
     background-color: var(--card-color);
     margin: 30px auto;
-    box-shadow: 10px 10px var(--card-shadow);
+    box-shadow: 10px 10px var(--card-shadow),
+                12px 12px 22px rgba(0, 0, 0, 0.287);
     padding: 30px;
     position: relative;
 }
@@ -80,7 +82,7 @@ body {
 .card-tooltip {
     position: absolute;
     font-size: 1.8rem;
-    background-color: #d13a97;
+    background-color: var(--card-tooltip);
     padding: 10px 40px 50px 40px;
     color: rgb(253, 234, 234);
     font-weight: lighter;
@@ -134,7 +136,8 @@ body {
    ----------------------- */
 
 .btn-1 {
-    background-color: #3c5fa3; 
+    background-color: #3c5fa3;
+    background-image: radial-gradient(#6283c7, #3c5fa3);
     cursor: pointer;
     height: 50px;
     width: 200px;
@@ -145,9 +148,12 @@ body {
     border-radius: 2px;
     border: 0;
     border-radius: 10px;
-    box-shadow: 0px 2px #6a83b6 inset;
+    box-shadow: 0px 2px #6583be inset;
 }
 
+    .btn-1:hover {
+        background-image: radial-gradient(#6283c7, #4369b6)
+    }
 
 /* -----------
     3D button 
@@ -540,4 +546,78 @@ body {
                  9px 9px 0px #5a2b43,
                  10px 10px 5px black;
 
+}
+
+/* ======================
+   -----Login form ------
+   ====================== */
+
+/* login wrapper */
+.login-form-wrapper {
+    background-image: linear-gradient(
+        0deg,
+        rgb(143, 61, 175) 50%,
+        rgb(211, 86, 86) 50%
+    );
+
+    text-align: center;
+    padding: 120px;
+    border-radius: 10px;
+}
+
+/* login card */
+.login-form-block {
+    background-color: rgb(199, 197, 102);
+    display: inline-block;
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Logo */
+.user-logo-clip {
+    background-color: #954eb1;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Input fields */
+.email-input, .pass-input {
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    margin: 50px 30px 10px 30px;
+    background-color: rgb(177, 172, 151);
+    transition: all 0.5s ease-in-out; 
+}
+
+    .email-input:focus, .pass-input:focus {
+        background-color: wheat;
+    }
+
+.pass-input {
+    margin: 10px 30px 20px 30px;
+}
+
+
+.submit-button {
+    display: block;
+    margin: 40px auto 50px auto;
+    padding: 10px 60px;
+    box-sizing: border-box;
+    font-size: 1.4em;
+    border-radius: 20px;
+    border: 0;
+    background-color: #d35656;
+    color: white;
+    font-weight: lighter;
+    font-family: 'Caveat Brush';
+    cursor: pointer;
 }
