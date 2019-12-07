@@ -663,11 +663,12 @@ body {
 }
 
 .profile-card-wrapper {
-    background-color: #c576bb;
+    background-color: #c9bae2;
     margin: auto;
     width: 400px;
     border-radius: 10px;
     padding-bottom: 20px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.473);
 }
 
 .profile-background-art {
