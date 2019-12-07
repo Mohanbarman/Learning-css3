@@ -659,16 +659,12 @@ body {
 /* Profile  */
 
 .profile-card-background {
-    background-color: rgb(148, 88, 145);
+    background-color: rgb(173, 93, 136);
     padding: 30px;
 }
 
 .profile-card-wrapper {
-    background-image: linear-gradient(
-        135deg,
-        #ec8baf 40%,
-        #83bbc7 80%
-    );
+    background-color: #c576bb;
     margin: auto;
     width: 400px;
     border-radius: 10px;
