@@ -442,7 +442,7 @@ body {
 
     .btn-8::after {
         position: absolute;
-        top: 12%;
+        top: 15%;
         left: 5px;
         
         content: '';
@@ -467,7 +467,6 @@ body {
     
     .btn-8-input:checked + .btn-8::after{
         position: absolute;
-        top: 12%;
         transform: translateX(40px);
         background-color: rgba(107, 107, 107, 0.397);
         
