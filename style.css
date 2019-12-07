@@ -442,7 +442,7 @@ body {
 
     .btn-8::after {
         position: absolute;
-        top: 15%;
+        top: 5px;
         left: 5px;
         
         content: '';
